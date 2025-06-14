@@ -1,10 +1,17 @@
 from telethon import TelegramClient, events
 import asyncio
+import os
+from dotenv import load_dotenv
 
-# Вставь свои значения
-api_id = 'YOUR_API_ID'
-api_hash = 'YOUR_API_HASH'
-phone = 'YOUR_PHONE_NUMBER'  # например, +79991234567
+# Загрузка переменных из .env
+load_dotenv()
+
+# Получаем значения из .env
+api_id = int(os.getenv("API_ID"))  # без кавычек, как число
+api_hash = os.getenv("API_HASH")   # строка
+phone = os.getenv("PHONE")         # строка
+channel_id = int(os.getenv('CHANNEL_ID'))
+feedback_chat_id = int(os.getenv('FEEDBACK_CHAT_ID'))
 
 # ID канала и чата для сбора информации
 channel_id = -1001234567890  # ID канала, где вести беседу
