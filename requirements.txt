@@ -1,0 +1,5 @@
+telethon
+pyjwt
+python-dotenv
+requests
+pytz

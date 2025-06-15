@@ -1,4 +1,15 @@
 # .gitignore
 .env
+key.json
 venv/
 __pycache__/
+assistant_session.session
+session.session
+dialogs.db
+*.session
+
+# Секреты и сессии
+assistant_data.db
+assistant.log
+
+tools/
